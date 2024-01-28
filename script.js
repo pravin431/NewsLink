@@ -1,4 +1,6 @@
-const API_KEY =  "1baff9e935074d2fb6cb7ada43fddc90";
+require('dotenv').config();
+
+const API_KEY =   process.env.API_KEY;
 const url = "https://newsapi.org/v2/everything?q="
 
 window.addEventListener("load", () => fetchNews("India"));
