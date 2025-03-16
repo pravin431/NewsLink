@@ -1,6 +1,6 @@
-const APIKEY = config.API_KEY;
+// const APIKEY = config.API_KEY;
 
-const url = "https://newsapi.org/v2/everything?q="
+// const url = "https://newsapi.org/v2/everything?q="
 
 window.addEventListener("load", () => fetchNews("India"));
 
