@@ -1,6 +1,5 @@
-require('dotenv').config();
-
-const API_KEY =   process.env.API_KEY;
+const APIKEY = config.API_KEY;
+// const APIKEY = process.env.API_KEY;
 const url = "https://newsapi.org/v2/everything?q="
 
 window.addEventListener("load", () => fetchNews("India"));
@@ -9,8 +8,9 @@ function reload(){
     window.location.reload();
 }
 async function fetchNews(query){
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const res = await fetch(`${url}${query}&apiKey=${APIKEY}`);
     const data = await res.json();
+    console.log("fetched data", data); // log fetched data
     bindData(data.articles);
 }
 function bindData(articles){
